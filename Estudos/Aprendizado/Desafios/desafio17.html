@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos</title>
+</head>
+<body>
+    <h1>Multiplos de 3</h1>
+    <h2>Informe dois números</h2>
+    <p>
+       Primeiro número: <input type="number" name="num1" id="num1">
+    </p>
+    <p>
+        Segundo número: <input type="number" name="num2" id="num2">
+    </p>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            let numero1 = document.getElementById("num1");
+            let numero2 = document.getElementById("num2");
+            let num1 = Number(numero1.value);
+            let num2 = Number(numero2.value);
+            let res = document.getElementById("res")
+            let cont = 0
+            res.innerHTML = ""
+            let encontrou = false
+            res.innerHTML +=  `Os números esntre ${num1} e ${num2} multiplos de 3 são `;
+
+            for(cont = num1 + 1; cont < num2; cont++){
+                if(cont % 3 == 0){
+
+                    res.innerHTML += `${cont}, `
+                    encontrou = true;
+                }
+            }if(!encontrou){
+                res.innerHTML = "Não tem multiplos"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Soma de Números Positivos</title>
+</head>
+<body>
+    <h1>Soma de Números Positivos</h1>
+
+    <p>Digite um número: 
+        <input type="number" id="numero">
+        <input type="button" value="Adicionar" onclick="adicionar()">
+    </p>
+
+    <div id="res"></div>
+
+    <script>
+        let soma = 0;
+
+        function adicionar() {
+            let num = document.getElementById("numero");
+            let res = document.getElementById("res");
+            let valor = Number(num.value);
+
+            if (valor < 0) {
+                res.innerHTML = `Fim! A soma dos números positivos é <strong>${soma}</strong>.`;
+                num.disabled = true; // desativa o input
+            } else {
+                soma += valor;
+                num.value = ""; // limpa o campo
+                num.focus(); // volta o cursor pro input
+            }
+        }
+    </script>
+</body>
+</html>

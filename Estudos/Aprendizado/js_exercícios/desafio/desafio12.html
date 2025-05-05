@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Pares</title>
+</head>
+<body>
+    <p>
+        Informe um número:
+        <input type="text" name="parouimpar" id="num">
+        <input type="button" value="Par ou Ímpar" onclick="verificar()">
+    </p>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+            let numero = document.getElementById("num")
+            let res = document.getElementById("res")
+
+            if(numero.value.length == 0){
+                window.alert("Sem número")
+            }else{
+                let num = Number(numero.value)
+                let c = 1
+                res.innerHTML = ''
+                while (c <= num){
+                    if(c % 2 == 0){
+                        res.innerHTML += `  ${c}  `
+                    }else{
+                    }
+                    c++
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

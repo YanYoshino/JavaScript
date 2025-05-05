@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mão na massa</title>
+</head>
+
+<body>
+    <h1>Somando dois valores</h1>
+
+    <!-- Campo onde o usuário digita o primeiro número -->
+    <input type="number" name="num1" id="num1">
+    +
+    <!-- Campo onde o usuário digita o segundo número -->
+    <input type="number" name="num2" id="num2">
+
+    <!-- Botão que chama a função somar() ao ser clicado -->
+    <input type="button" value="somar" onclick="somar()">
+
+    <!-- Local onde o resultado será exibido -->
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+            // Pegando os elementos input pelo ID
+            var number1 = document.getElementById('num1')
+            var number2 = document.getElementById('num2')
+            var res = document.getElementById('res')
+
+            // Convertendo os valores digitados para números
+            var n1 = Number(number1.value)
+            var n2 = Number(number2.value)
+
+            // Realizando a soma e exibindo no resultado
+            var s = n1 + n2
+            res.innerHTML = `A soma de ${n1} + ${n2} é igual a ${s}`
+        }
+    </script>

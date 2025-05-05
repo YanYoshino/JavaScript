@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+    <div id="but1">
+        <input type="button" value="Botão 1" id="1" onclick="clicar(1)">
+        <input type="button" value="Botão 2" id="2" onclick="clicar(2)">
+        <input type="button" value="Botão 3" id="3" onclick="clicar(3)">
+    </div>
+
+    <script>
+        function clicar(botao){
+        if(botao === 1){
+            alert("Você clicou no primeiro botão")
+        }else if(botao === 2){
+            alert("Você clicou no segundo botão")
+        }else{
+            alert("Você clicou no terceiro botão")
+        }
+        }
+    </script>
+</body>
+</html>

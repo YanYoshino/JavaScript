@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <input type="text" id="pais">
+    <input type="button" value="Verificar" id="verificar" onclick="verificando()">
+    <div id="res">
+
+    <script>
+        function verificando(){
+            var nacionalidade = document.getElementById("pais")
+            var res = document.getElementById("res")
+            var valor = nacionalidade.value.toLowerCase()
+
+            if (valor == "brasil"){
+                res.innerHTML = `<p>Você é brasileiro</p>`
+            }else{
+                res.innerHTML = `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>

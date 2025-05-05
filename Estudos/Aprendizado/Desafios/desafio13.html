@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada completa</title>
+</head>
+<body>
+    <p>Informe um número: <input type="number" name="num" id="txtn">
+    <input type="button" value="Tabuada" onclick="tabuada()">
+    </p>
+    <div id="res"></div>
+    <script>
+        var numero = document.querySelector("#txtn")
+        var res = document.querySelector("#res")
+        function tabuada(){
+            let cont = 0
+            let num = Number(numero.value)
+            if(numero.value.length == 0 ){
+                window.alert("Sem valor")
+            }else{
+                res.innerHTML = ""
+                for(cont; cont <= 10; cont++){
+                    res.innerHTML += `${num} x ${cont} = ${num*cont} <br>` 
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

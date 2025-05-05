@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuda</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Número <input type="number" name="num1" id="num1"> <input type="button" value="Gerar tabuada" onclick="tabuada()"></p>
+    <select id="res" size="11"></select>
+    
+    <script>
+        
+        function tabuada(){
+            let numero = document.getElementById("num1");
+            let res = document.getElementById("res");
+            let num = Number(numero.value);
+            let c = 0
+            res.innerHTML = ""
+            for(c; c <= 10; c++){
+                let item = document.createElement("option");
+                item.text = `${num} x ${c} = ${num*c}`
+                res.appendChild(item)
+            }
+        }
+    </script>
+
+</body>
+</html>

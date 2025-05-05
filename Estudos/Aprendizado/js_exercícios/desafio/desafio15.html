@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comntagem personalizada</title>
+</head>
+<body>
+    <h1>Contagem personalizada</h1>
+    <h2>Informe os valores para a contagem</h2>
+
+        <p>Início <input type="number" name="num1" id="num1"></p>
+        <p>Fim <input type="number" name="num2" id="num2"></p>
+        <p><input type="button" value="Contar" onclick="contar()"></p>
+
+    <div id="res"></div>
+
+    <script>
+        function contar(){
+            let numero1 = document.getElementById("num1")
+            let numero2 = document.getElementById("num2")
+            let num1 = Number(numero1.value)
+            let num2 = Number(numero2.value)
+            let res = document.getElementById("res")
+            let cont = 0
+
+            res.innerHTML = ''
+            if(num1 < num2){
+                for(cont = num1 + 1; cont < num2 ; cont++){
+                    res.innerHTML += `${cont} `
+                }
+            }else if(num1 > num2){
+                for(cont = num1 - 1; cont > num2 + 1; cont--){
+                    res.innerHTML += `${cont} `
+                }
+            }else{
+                res.innerHTML = `Numeros iguais`
+            }
+
+        }
+    </script>
+</body>
+</html>

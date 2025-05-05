@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="mostrarAnteEDepois()">
+    
+    <script>
+        function mostrarAnteEDepois(){
+        var num = window.prompt("Digite um valor")
+        var num1 = Number(num)
+        var antes = num1 - 1
+        var depois = num1 + 1
+        var mostrar = window.alert(`Antes de ${num1}, temos ${antes} e depois temos o ${depois}`)
+       }
+    </script>
+    
+</body>
+</html>
